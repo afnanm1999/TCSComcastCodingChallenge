@@ -34,4 +34,4 @@
 
 ## Challenge
 
-You can find the entire [https://github.com/afnanm1999/TCSComcastCodingChallenge/blob/master/ChallengeInstructions.pdf] (instructions here)
+You can find the entire [Instructions Here](https://github.com/afnanm1999/TCSComcastCodingChallenge/blob/master/ChallengeInstructions.pdf)
