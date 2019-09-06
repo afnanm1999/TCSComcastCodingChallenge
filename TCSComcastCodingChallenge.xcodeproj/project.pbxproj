@@ -39,6 +39,8 @@
 		CF69C82A2322221F008366BD /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69C8282322221F008366BD /* CharacterDetailsViewModel.swift */; };
 		CF69C82C2322282C008366BD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69C82B2322282C008366BD /* Helpers.swift */; };
 		CF69C82D2322282C008366BD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69C82B2322282C008366BD /* Helpers.swift */; };
+		CF69C83023222EC7008366BD /* TheWireCharacterViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF69C82F23222EC7008366BD /* TheWireCharacterViewer-Info.plist */; };
+		CF69C83123222EC7008366BD /* TheWireCharacterViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF69C82F23222EC7008366BD /* TheWireCharacterViewer-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,13 +59,13 @@
 		CF69C8052321FE2B008366BD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CF69C8082321FF0C008366BD /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		CF69C81D23221182008366BD /* TheWireCharacterViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWireCharacterViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF69C81E23221182008366BD /* TheWireCharacterViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TheWireCharacterViewer-Info.plist"; path = "/Users/afnanmirza/Developer/IOS/Coding Tests/TCSComcastCodingChallenge/TheWireCharacterViewer-Info.plist"; sourceTree = "<absolute>"; };
 		CF69C820232212EC008366BD /* SimpsonsViewerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsViewerConfiguration.swift; sourceTree = "<group>"; };
 		CF69C82223221640008366BD /* TheWireViewerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWireViewerConfiguration.swift; sourceTree = "<group>"; };
 		CF69C82423221E56008366BD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CF69C8282322221F008366BD /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		CF69C82B2322282C008366BD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		CF69C82E23222923008366BD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CF69C82F23222EC7008366BD /* TheWireCharacterViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TheWireCharacterViewer-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +220,8 @@
 		CF69C82723221FBB008366BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF69C82F23222EC7008366BD /* TheWireCharacterViewer-Info.plist */,
 				CF69C7DB2321EB04008366BD /* SimpsonsCharacterViewer-Info.plist */,
-				CF69C81E23221182008366BD /* TheWireCharacterViewer-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF69C7DA2321EB04008366BD /* LaunchScreen.storyboard in Resources */,
+				CF69C83023222EC7008366BD /* TheWireCharacterViewer-Info.plist in Resources */,
 				CF69C7D72321EB04008366BD /* Assets.xcassets in Resources */,
 				CF69C7E62321EC5B008366BD /* ChallengeInstructions.pdf in Resources */,
 				CF69C7D52321EB03008366BD /* Main.storyboard in Resources */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF69C81523221181008366BD /* LaunchScreen.storyboard in Resources */,
+				CF69C83123222EC7008366BD /* TheWireCharacterViewer-Info.plist in Resources */,
 				CF69C81623221181008366BD /* Assets.xcassets in Resources */,
 				CF69C81723221181008366BD /* ChallengeInstructions.pdf in Resources */,
 				CF69C81823221181008366BD /* Main.storyboard in Resources */,
