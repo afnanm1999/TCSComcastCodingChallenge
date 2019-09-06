@@ -12,6 +12,7 @@
 		CF69C7D52321EB03008366BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF69C7D32321EB03008366BD /* Main.storyboard */; };
 		CF69C7D72321EB04008366BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF69C7D62321EB04008366BD /* Assets.xcassets */; };
 		CF69C7DA2321EB04008366BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF69C7D82321EB04008366BD /* LaunchScreen.storyboard */; };
+		CF69C7E62321EC5B008366BD /* ChallengeInstructions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CF69C7E52321EC5B008366BD /* ChallengeInstructions.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CF69C7D62321EB04008366BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF69C7D92321EB04008366BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF69C7DB2321EB04008366BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF69C7E52321EC5B008366BD /* ChallengeInstructions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ChallengeInstructions.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		CF69C7C32321EB03008366BD = {
 			isa = PBXGroup;
 			children = (
+				CF69C7E52321EC5B008366BD /* ChallengeInstructions.pdf */,
 				CF69C7CE2321EB03008366BD /* TCSComcastCodingChallenge */,
 				CF69C7CD2321EB03008366BD /* Products */,
 			);
@@ -54,14 +57,46 @@
 		CF69C7CE2321EB03008366BD /* TCSComcastCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				CF69C7CF2321EB03008366BD /* AppDelegate.swift */,
-				CF69C7D12321EB03008366BD /* ViewController.swift */,
-				CF69C7D32321EB03008366BD /* Main.storyboard */,
-				CF69C7D62321EB04008366BD /* Assets.xcassets */,
-				CF69C7D82321EB04008366BD /* LaunchScreen.storyboard */,
-				CF69C7DB2321EB04008366BD /* Info.plist */,
+				CF69C7E12321EBEF008366BD /* Core */,
+				CF69C7E32321EC13008366BD /* Assets */,
+				CF69C7E22321EC00008366BD /* Storyboards & Xibs */,
+				CF69C7E42321EC22008366BD /* View Controllers */,
 			);
 			path = TCSComcastCodingChallenge;
+			sourceTree = "<group>";
+		};
+		CF69C7E12321EBEF008366BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CF69C7CF2321EB03008366BD /* AppDelegate.swift */,
+				CF69C7DB2321EB04008366BD /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CF69C7E22321EC00008366BD /* Storyboards & Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				CF69C7D32321EB03008366BD /* Main.storyboard */,
+				CF69C7D82321EB04008366BD /* LaunchScreen.storyboard */,
+			);
+			path = "Storyboards & Xibs";
+			sourceTree = "<group>";
+		};
+		CF69C7E32321EC13008366BD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CF69C7D62321EB04008366BD /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CF69C7E42321EC22008366BD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF69C7D12321EB03008366BD /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +159,7 @@
 			files = (
 				CF69C7DA2321EB04008366BD /* LaunchScreen.storyboard in Resources */,
 				CF69C7D72321EB04008366BD /* Assets.xcassets in Resources */,
+				CF69C7E62321EC5B008366BD /* ChallengeInstructions.pdf in Resources */,
 				CF69C7D52321EB03008366BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TCSComcastCodingChallenge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TCSComcastCodingChallenge/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TCSComcastCodingChallenge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TCSComcastCodingChallenge/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
