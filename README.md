@@ -3,6 +3,9 @@
 ### Features
 
 - Lists All of the Character Names in a `UITableView` on the `MainViewController`.
+- Uses `SplitViewController` to make the app accessable on an iPad.
+- Two Different Varients of the application which use a shared Codebase.
+- Create a Singleton for `APIHelper.swift` to make it easier to call network functions 
 - Uses MVVM Design Pattern.
 
 ### Technical Specifications
