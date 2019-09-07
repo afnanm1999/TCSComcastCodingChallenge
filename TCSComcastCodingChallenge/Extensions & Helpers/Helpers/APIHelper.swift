@@ -29,7 +29,7 @@ class APIHelper {
         
         var characterList: [Character] = [Character]()
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        self.fetchData(from: url) { (data, response, error) in
             guard let dataResponse = data, error == nil else { return completionHandler([], .responseError) }
             
             do {
@@ -50,7 +50,7 @@ class APIHelper {
                 return completionHandler([], .parsingJSONError)
             }
         }
-        task.resume()
+        
     }
     
     // Saparate Description Text and Get the Character Name
