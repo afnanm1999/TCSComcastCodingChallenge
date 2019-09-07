@@ -22,15 +22,22 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configureView()
+    }
+    
+    func configureView() {
         if let viewModel = self.detailViewModel {
             self.characterImgView.image = UIImage(named: "no-image")
             
+            // Download Image from provided URL
             if let imgUrl = viewModel.characterImgUrl, let url = URL(string: imgUrl) {
-                APIHelper.shared.fetchData(from: url) { data, response, error in
-                    guard let data = data, error == nil else { return }
-                    
-                    DispatchQueue.main.async() {
-                        self.characterImgView.image = UIImage(data: data)
+                DispatchQueue.global(qos: .background).async {
+                    APIHelper.shared.fetchData(from: url) { data, response, error in
+                        guard let data = data, error == nil else { return }
+                        
+                        DispatchQueue.main.async() {
+                            self.characterImgView.image = UIImage(data: data)
+                        }
                     }
                 }
             }
@@ -39,5 +46,4 @@ class DetailsViewController: UIViewController {
             self.characterDescriptionLbl.text = viewModel.characterDescription ?? "Unknown Character Description"
         }
     }
-    
 }

@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+    /**
+     Shows a `UIAlertController` with the provided title, message, and style.
+     
+     - Parameter title: The title to show in the `UIAlertController`
+     - Parameter message: The message to show in the `UIAlertController`
+     - Parameter style: The Preferred Style for the `UIAlertController`. Default is `UIAlertController.Style.alert`
+     */
     func showDefaultAlert(title: String, message: String, style: UIAlertController.Style = .alert) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         

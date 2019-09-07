@@ -22,13 +22,13 @@
 - [x] Each variant should have a different name, package-name, and url that it pulls data from
 - [x] Consider custom cells instead of storyboard.
 - [x] Follow MVVM Design Pattern
-- [ ] Strong network framework
+- [x ] Strong network framework
 
 ### Personal Checklist
 
-- [ ] Cleanup `APIHelper.swift` file
-- [ ] Document Code
-- [ ] Reorganize Some code
+- [ x] Cleanup `APIHelper.swift` file
+- [x ] Document Code
+- [ x] Reorganize Some code
 - [ ] Reduce Clutter
 - [ ] Cleanup View Models
 

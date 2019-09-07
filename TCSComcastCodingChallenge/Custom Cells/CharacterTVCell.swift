@@ -14,11 +14,9 @@ class CharacterTVCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configureCell(viewModel: CharacterListViewModel, rowNumber: Int) {
         self.characterNameLbl.text = viewModel.getTitleAt(index: rowNumber)
     }
-    
 }

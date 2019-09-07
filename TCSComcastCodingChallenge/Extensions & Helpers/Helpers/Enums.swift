@@ -24,3 +24,15 @@ enum APIError: Error {
         }
     }
 }
+
+enum Storyboards: String {
+    case Main
+    
+    enum Identifiers: String {
+        case characterDetailsView
+    }
+}
+
+enum CustomCellNibNames: String {
+    case CharacterTVCell
+}

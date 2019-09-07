@@ -24,11 +24,11 @@ class MainViewController: UIViewController {
         self.title = AppConfiguration.appName
         
         self.setupAPI()
-        self.setupSearchBar()
+        self.configureSearchBar()
         self.configureTableView()
     }
     
-    // Fetch Data from API and reload table view
+    // Fetch Data from API and reload `UITableView`
     func setupAPI() {
         self.viewModel.fetchCharacters { [weak self] (error) in
             if let error = error {
@@ -39,13 +39,15 @@ class MainViewController: UIViewController {
         }
     }
     
-    func setupSearchBar() {
+    // Configures Search Bar
+    func configureSearchBar() {
         self.searchBar.delegate = self
         self.searchBar.placeholder = "Search Characters"
     }
     
+    // Configures Table View
     func configureTableView() {
-        let characterCellXib = UINib(nibName: "CharacterTVCell", bundle: nil)
+        let characterCellXib = UINib(nibName: CustomCellNibNames.CharacterTVCell.rawValue, bundle: nil)
         self.tableView.register(characterCellXib, forCellReuseIdentifier: self.viewModel.characterCellID)
     }
 }
@@ -62,8 +64,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "characterDetailsView") as? DetailsViewController else { return }
+        guard let detailViewController = UIStoryboard(name: Storyboards.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier: Storyboards.Identifiers.characterDetailsView.rawValue) as? DetailsViewController else { return }
         
         let character = viewModel.getCharacter(at: indexPath.row)
         detailViewController.detailViewModel = CharacterDetailsViewModel(character: character)

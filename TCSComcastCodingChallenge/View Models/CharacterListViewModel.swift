@@ -37,20 +37,35 @@ class CharacterListViewModel {
         }
     }
     
+    /**
+     This function gets the Count from Characters Object Array.
+     
+     - Returns: An integer containing the Character Object Coount
+     */
     func getCharacterListCount() -> Int {
         self.getFilteredCharacters()
         return self.filteredCharacterList.count
     }
     
+    /**
+     This function uses the provided index and returns the `Character` Object.
+     
+     - Parameter index: The index location to search in the Character's Object Array.
+     
+     - Returns: An object of `Character`
+     */
     func getCharacter(at index: Int) -> Character {
         return self.filteredCharacterList[index]
     }
+    
     
     func getTitleAt(index: Int) -> String? {
         return self.filteredCharacterList[index].title
     }
     
-    // search on user list
+    /**
+     This function is used to filter data
+     */
     func getFilteredCharacters() {
         if self.searchText.isEmpty {
             self.filteredCharacterList = self.characters

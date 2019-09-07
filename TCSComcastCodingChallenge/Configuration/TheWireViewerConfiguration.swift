@@ -9,11 +9,6 @@
 import Foundation
 
 struct AppConfiguration {
-    static var apiURL: String {
-        get {
-            return "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
-        }
-    }
-    
+    static let apiURL = "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
     static let appName = "The Wire Character Viewer"
 }
