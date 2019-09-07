@@ -10,6 +10,10 @@
 - Xcode Version: <a href="https://developer.apple.com/documentation/xcode_release_notes/xcode_10_3_release_notes" target="_blank">10.3</a><br/>
 - Design Pattern: <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel" target="_blank">MVVM</a>
 
+### Dependencies
+
+I avoided implementing any Dependencies in order to help Interviewers save some time. 
+
 ### Challenge Requirement Checklist
 
 - [x] Comprised of two parts, a list and a detail.
