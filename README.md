@@ -17,7 +17,11 @@
 
 I avoided implementing any Dependencies in order to help Interviewers save some time. 
 
-### Challenge Requirement Checklist
+## Challenge
+
+You can find the entire [Instructions Here](https://github.com/afnanm1999/TCSComcastCodingChallenge/blob/master/ChallengeInstructions.pdf)
+
+### Challenge Requirements Checklist
 
 - [x] Comprised of two parts, a list and a detail.
 - [x] On Phones, the list and detail should be separate screens, on Tablets, list and detail should appear on the same screen
@@ -39,6 +43,11 @@ I avoided implementing any Dependencies in order to help Interviewers save some 
 - [ ] Reduce Clutter
 - [ ] Cleanup View Models
 
-## Challenge
+### How to use the app
 
-You can find the entire [Instructions Here](https://github.com/afnanm1999/TCSComcastCodingChallenge/blob/master/ChallengeInstructions.pdf)
+In order to test the app, project files need to be opened in Xcode 10.3<br/>
+After the project has been opened successfully in Xcode click on the Schemes tab and select either `SimpsonsCharacterViewer` or `TheWireCharacterViewer`. You can now run the application on a device of your choice. Depending on which scheme you chose the API will change between "http://api.duckduckgo.com/?q=simpsons+characters&format=json" & "http://api.duckduckgo.com/?q=the+wire+characters&format=json". 
+
+### Other
+
+Please feel free to contact me at anytime if you have any questions.
