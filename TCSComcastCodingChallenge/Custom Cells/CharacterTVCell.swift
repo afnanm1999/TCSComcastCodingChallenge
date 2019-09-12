@@ -9,14 +9,17 @@
 import UIKit
 
 class CharacterTVCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlets
     @IBOutlet var characterNameLbl: UILabel!
     
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    // MARK: - Helper Functions
     func configureCell(viewModel: CharacterListViewModel, rowNumber: Int) {
-        self.characterNameLbl.text = viewModel.getTitleAt(index: rowNumber)
+        self.characterNameLbl.text = viewModel.getCharacterName(at: rowNumber)
     }
 }

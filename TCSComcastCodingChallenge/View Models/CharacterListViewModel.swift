@@ -14,8 +14,8 @@ class CharacterListViewModel {
     let characterCellID = "CharacterCell"
     
     // Object Arrays
-    var characters: [Character] = [Character]()
-    private var filteredCharacterList: [Character] = [Character]()
+    var characters: [RelatedTopic] = [RelatedTopic]()
+    private var filteredCharacterList: [RelatedTopic] = [RelatedTopic]()
     
     var searchText: String = "" {
         didSet {
@@ -29,8 +29,8 @@ class CharacterListViewModel {
                 completion(error)
             } else if let character = character {
                 DispatchQueue.main.async {
-                    self?.characters = character
-                    self?.filteredCharacterList = character
+                    self?.characters = character.relatedTopics
+                    self?.filteredCharacterList = character.relatedTopics
                     completion(nil)
                 }
             }
@@ -52,15 +52,18 @@ class CharacterListViewModel {
      
      - Parameter index: The index location to search in the Character's Object Array.
      
-     - Returns: An object of `Character`
+     - Returns: An object of `RelatedTopic`
      */
-    func getCharacter(at index: Int) -> Character {
+    func getCharacter(at index: Int) -> RelatedTopic {
         return self.filteredCharacterList[index]
     }
     
+    func getCharacterName(at index: Int) -> String {
+        return self.getCharacter(at: index).characterFullDescription.getCharacterName()
+    }
     
-    func getTitleAt(index: Int) -> String? {
-        return self.filteredCharacterList[index].title
+    func getCharacterDescription(at index: Int) -> String {
+        return self.getCharacter(at: index).characterFullDescription.getCharacterDescription()
     }
     
     /**
@@ -71,7 +74,7 @@ class CharacterListViewModel {
             self.filteredCharacterList = self.characters
         } else {
             self.filteredCharacterList = self.characters.filter({
-                $0.title?.uppercased().contains(self.searchText.uppercased()) ?? false || $0.description?.uppercased().contains(self.searchText.uppercased()) ?? false
+                $0.characterFullDescription.getCharacterName().uppercased().contains(self.searchText.uppercased()) || $0.characterFullDescription.getCharacterDescription().uppercased().contains(self.searchText.uppercased())
             })
         }
     }

@@ -25,25 +25,19 @@ class DetailsViewController: UIViewController {
         self.configureView()
     }
     
+    // MARK: - Functions
     func configureView() {
         if let viewModel = self.detailViewModel {
             self.characterImgView.image = UIImage(named: "no-image")
-            
-            // Download Image from provided URL
-            if let imgUrl = viewModel.characterImgUrl, let url = URL(string: imgUrl) {
-                DispatchQueue.global(qos: .background).async {
-                    APIHelper.shared.fetchData(from: url) { data, response, error in
-                        guard let data = data, error == nil else { return }
-                        
-                        DispatchQueue.main.async() {
-                            self.characterImgView.image = UIImage(data: data)
-                        }
-                    }
+
+            viewModel.getCharacterImg { [weak self] (characterImg) in
+                if characterImg != nil {
+                    self?.characterImgView.image = characterImg
                 }
             }
             
-            self.characterNameLbl.text = viewModel.characterName ?? "Unknown Character Name"
-            self.characterDescriptionLbl.text = viewModel.characterDescription ?? "Unknown Character Description"
+            self.characterNameLbl.text = viewModel.characterName
+            self.characterDescriptionLbl.text = viewModel.characterDescription
         }
     }
 }
